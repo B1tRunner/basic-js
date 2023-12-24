@@ -1,8 +1,11 @@
+const { isNumber } = require('../../core-js-numbers/src/numbers-tasks.js');
+const { isString } = require('../../core-js-strings/src/strings-tasks.js');
 const { NotImplementedError } = require('../extensions/index.js');
 
 const MODERN_ACTIVITY = 15;
 const HALF_LIFE_PERIOD = 5730;
 
+const k = 0.693 / HALF_LIFE_PERIOD;
 /**
  * Determine the age of archeological find by using
  * given MODERN_ACTIVITY and HALF_LIFE_PERIOD values
@@ -17,8 +20,12 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-function dateSample(/* sampleActivity */) {
-  throw new NotImplementedError('Not implemented');
+function dateSample(sampleActivity) {
+  if (isString(sampleActivity) && Number(sampleActivity) && Number(sampleActivity) > 0 && Number(sampleActivity) < 15) {
+    return Math.ceil(Math.log(MODERN_ACTIVITY/Number(sampleActivity)) / k);
+  }
+  return false;
+  /* throw new NotImplementedError('Not implemented'); */
   // remove line with error and write your code here
 }
 
