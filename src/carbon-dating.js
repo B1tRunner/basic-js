@@ -1,5 +1,3 @@
-const { isNumber } = require('../../core-js-numbers/src/numbers-tasks.js');
-const { isString } = require('../../core-js-strings/src/strings-tasks.js');
 const { NotImplementedError } = require('../extensions/index.js');
 
 const MODERN_ACTIVITY = 15;
@@ -21,7 +19,7 @@ const k = 0.693 / HALF_LIFE_PERIOD;
  *
  */
 function dateSample(sampleActivity) {
-  if (isString(sampleActivity) && Number(sampleActivity) && Number(sampleActivity) > 0 && Number(sampleActivity) < 15) {
+  if (typeof sampleActivity === 'string' && Number(sampleActivity) && Number(sampleActivity) > 0 && Number(sampleActivity) < 15) {
     return Math.ceil(Math.log(MODERN_ACTIVITY/Number(sampleActivity)) / k);
   }
   return false;
