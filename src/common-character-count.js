@@ -17,7 +17,7 @@ function getCommonCharacterCount(s1, s2) {
   for (let char of s1){ 
     let index = arrayStr2.findIndex(c => c === char); 
     if(index >= 0){ 
-      counter++; 
+      counter += 1; 
       arrayStr2.splice(index, 1); 
     } 
   } 
