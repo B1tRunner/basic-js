@@ -16,43 +16,17 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function repeater(/* str, options */) {
- /*  let strNew = String(str);
-  let arr = [];
-  let option = options;
-  for (let i = 0; i < option.repeatTimes; i += 1) {
-    arr.push(strNew);
-    
-    for (let j = 0; j < option.additionRepeatTimes; j += 1) {
-      arr.push(option.addition);
+  /* let strArr = [];
+  for (let i = 0; i < options.repeatTimes; i += 1) {
+    strArr.push(str);
 
-      if (Number.isNaN(option.additionRepeatTimes) || option.additionRepeatTimes < 1) {
-        break
-      }
-      if (j === option.additionRepeatTimes - 1 && option.additionRepeatTimes !== 1) {
-        break
-      }
-      if (option.additionSeparator === '') {
-        arr.push('|');
-      }
-
-      arr.push(option.additionSeparator);
+    for (let j = 0; j < options.additionRepeatTimes; j += 1) {
+      strArr.push(options.addition);
+      strArr.push(options.additionSeparator);
     }
-    if (Number.isNaN(option.repeatTimes) || option.repeatTimes < 1) {
-      break
-    }
-
-    if (i === option.repeatTimes - 1 && option.repeatTimes !== 1) {
-      break
-    }
-    
-    if (option.separator === undefined && option.repeatTimes > 1) {
-      arr.push('+');
-    }
-
-    arr.push(option.separator);
+    strArr.push(options.separator)
   }
-
-  return arr.join('') */
+  return strArr.join('') */
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
