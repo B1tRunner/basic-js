@@ -16,7 +16,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  * The result should be 9
  */
-function getMatrixElementsSum(matrix) { //здесь обратная итерация до первого элемента.// Когда первый элемент найдется - вы ти из цикла
+function getMatrixElementsSum(matrix) { 
   let solutionSum = 0;
   for (let i = matrix.length - 1; i > 0; i -= 1) {
     for (let j = 0; j < matrix[i].length; j += 1) {
